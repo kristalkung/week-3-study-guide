@@ -3,12 +3,10 @@
 {% block content %}
 
 Welcome to the Site
-
-<p>#2) Create a form on this page that asks for the user's name.</p>
-
-<form action="/save-name">
-    <input type="text" name=user_name value=name>
+<p>Enter your name</p>
+<form action="/save-name" method="POST">
     <label>Name: </label>
+    <input type="text" name="name">
     <input type="submit">
 </form>
 
