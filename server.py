@@ -16,11 +16,21 @@ def show_homepage():
 
 @app.route('/form')
 def show_form():
-    pass
+    
+
+    return render_template('form.html')
 
 @app.route('/results')
 def show_results():
-    pass
+    
+    cheery = request.args.get("cheery")
+    honest = request.args.get("honest")
+    dreary = request.args.get("dreary")
+
+    return render_template('results.html',
+                            cheery=cheery,
+                            honest=honest,
+                            dreary=dreary)
 
 
 if __name__ == "__main__":
